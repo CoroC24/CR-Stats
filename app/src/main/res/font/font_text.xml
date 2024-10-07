@@ -4,20 +4,20 @@
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/YouBlockhead"
+        android:font="@font/you_blockhead"
         tools:targetApi="o" />
     <font
         android:fontStyle="italic"
         android:fontWeight="400"
-        android:font="@font/YouBlockheadCaps"
+        android:font="@font/you_blockhead_caps"
         tools:targetApi="o" />
     <font
         android:fontStyle="normal"
         android:fontWeight="700"
-        android:font="@font/YouBlockheadCapsOpen"
+        android:font="@font/you_blockhead_open_caps"
         tools:ignore="UnusedAttribute" />    <font
         android:fontStyle="normal"
         android:fontWeight="700"
-        android:font="@font/YouBlockheadOpen"
+        android:font="@font/you_blockhead_open"
     tools:targetApi="o" />
 </font-family>

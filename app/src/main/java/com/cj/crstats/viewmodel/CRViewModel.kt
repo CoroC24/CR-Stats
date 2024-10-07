@@ -17,9 +17,9 @@ class CRViewModel : ViewModel() {
     private val _playerInfo = MutableLiveData<List<PlayerInfoObj>>()
     val playerInf: LiveData<List<PlayerInfoObj>> get() = _playerInfo
 
-    fun fetchPlayerInfo(context: Context) {
+    fun fetchPlayerInfo(context: Context, playerTag: String) {
         try {
-            RetrofitClient.instance.getPlayerInfo("Bearer ${RetrofitClient.API_KEY}", "#8PY0YJ0YG").enqueue(object :
+            RetrofitClient.instance.getPlayerInfo(playerTag).enqueue(object :
                 Callback<List<PlayerInfoObj>> {
                 override fun onResponse(call: Call<List<PlayerInfoObj>>, response: Response<List<PlayerInfoObj>>) {
                     if (response.isSuccessful) {
@@ -30,6 +30,7 @@ class CRViewModel : ViewModel() {
                 override fun onFailure(call: Call<List<PlayerInfoObj>>, t: Throwable) {
                     Toast.makeText(context, "Error al obtener la información del jugador $t", Toast.LENGTH_LONG)
                         .show()
+                    t.printStackTrace()
                 }
 
             })

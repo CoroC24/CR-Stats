@@ -7,6 +7,9 @@ import retrofit2.http.Path
 
 interface CRApiService {
 
+    /*@GET("players/{playerTag}")
+    fun getPlayerInfo(@Header("Authorization") authorization: String, @Path("playerTag") playerTag: String) : Call<List<PlayerInfoObj>>*/
+
     @GET("players/{playerTag}")
-    fun getPlayerInfo(@Header("Authorization") authorization: String, @Path("playerTag") playerTag: String) : Call<List<PlayerInfoObj>>
+    fun getPlayerInfo(@Path("playerTag") playerTag: String) : Call<List<PlayerInfoObj>>
 }
