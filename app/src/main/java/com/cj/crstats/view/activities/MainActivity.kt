@@ -7,7 +7,6 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.lifecycle.ViewModel
 import com.cj.crstats.R
 import com.cj.crstats.viewmodel.CRViewModel
 
@@ -29,9 +28,7 @@ class MainActivity : AppCompatActivity() {
         val textView: TextView = findViewById(R.id.textView)
 
         crViewModel.playerInf.observe(this){ playerInf ->
-            var playerTag: String = playerInf[0].toString()
-            var playerName: String = playerInf[1].toString()
-            textView.text = playerTag + " - " + playerName
+            textView.text = playerInf.tag + " - " + playerInf.name
         }
 
         crViewModel.fetchPlayerInfo(applicationContext, "8PY0YJ0YG")

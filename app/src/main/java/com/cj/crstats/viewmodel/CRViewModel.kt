@@ -13,20 +13,20 @@ import retrofit2.Response
 
 class CRViewModel : ViewModel() {
 
-    private val _playerInfo = MutableLiveData<List<PlayerDataObj>>()
-    val playerInf: LiveData<List<PlayerDataObj>> get() = _playerInfo
+    private val _playerInfo = MutableLiveData<PlayerDataObj>()
+    val playerInf: LiveData<PlayerDataObj> get() = _playerInfo
 
     fun fetchPlayerInfo(context: Context, playerTag: String) {
         try {
             RetrofitClient.instance.getPlayerInfo(playerTag).enqueue(object :
-                Callback<List<PlayerDataObj>> {
-                override fun onResponse(call: Call<List<PlayerDataObj>>, response: Response<List<PlayerDataObj>>) {
+                Callback<PlayerDataObj> {
+                override fun onResponse(call: Call<PlayerDataObj>, response: Response<PlayerDataObj>) {
                     if (response.isSuccessful) {
                         _playerInfo.value = response.body()
                     }
                 }
 
-                override fun onFailure(call: Call<List<PlayerDataObj>>, t: Throwable) {
+                override fun onFailure(call: Call<PlayerDataObj>, t: Throwable) {
                     Toast.makeText(context, "Error al obtener la información del jugador $t", Toast.LENGTH_LONG)
                         .show()
                     t.printStackTrace()
