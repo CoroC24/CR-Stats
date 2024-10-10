@@ -1,9 +1,9 @@
-package com.cj.crstats.model
+package com.cj.crstats.model.dataobj
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-data class PlayerInfoObj(
+data class ClanDataObj(
 
     @SerializedName("tag")
     @Expose
@@ -13,11 +13,7 @@ data class PlayerInfoObj(
     @Expose
     val name: String,
 
-    @SerializedName("expLevel")
+    @SerializedName("badgeId")
     @Expose
-    val expLevel: Int,
-
-    @SerializedName("trophies")
-    @Expose
-    val trophies: Int,
+    val badgeId: Int
 )
