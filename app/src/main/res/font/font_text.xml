@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<font-family xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<font-family xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
     <font
+        android:font="@font/you_blockhead"
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/you_blockhead"
         tools:targetApi="o" />
     <font
+        android:font="@font/you_blockhead_caps"
         android:fontStyle="italic"
         android:fontWeight="400"
-        android:font="@font/you_blockhead_caps"
         tools:targetApi="o" />
     <font
-        android:fontStyle="normal"
-        android:fontWeight="700"
-        android:font="@font/you_blockhead_open_caps"
-        tools:ignore="UnusedAttribute" />    <font
-        android:fontStyle="normal"
-        android:fontWeight="700"
         android:font="@font/you_blockhead_open"
-    tools:targetApi="o" />
+        android:fontStyle="normal"
+        android:fontWeight="700"
+        tools:ignore="UnusedAttribute" />
+    <font
+        android:font="@font/you_blockhead_open_caps"
+        android:fontStyle="normal"
+        android:fontWeight="700"
+        tools:targetApi="o" />
 </font-family>

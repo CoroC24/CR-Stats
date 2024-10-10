@@ -6,4 +6,7 @@
     </style>
 
     <style name="Theme.CRStats" parent="Base.Theme.CRStats" />
+    <style name="CustomSearchHintStyle" parent="TextAppearance.AppCompat">
+        <item name="android:textColorHint">@color/blue</item>
+    </style>
 </resources>
